@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-                            
+class ViewController: UIViewController, HNAPIProtocol {
+    
+    var api: HNAPI = HNAPI()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        api.delegate = self
+        api.getArticles()
+        
+    }
+    
+    //delegate method
+    func didRecieveResponse(results: NSDictionary) {
+        println(results["items"])
     }
 
     override func didReceiveMemoryWarning() {
