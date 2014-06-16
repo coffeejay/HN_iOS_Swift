@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, HNAPIProtocol {
+class ViewController: UIViewController, HNAPIProtocol, UITableViewDelegate, UITableViewDataSource {
     
     var api: HNAPI = HNAPI()
-    
-    
+    var stories: NSMutableArray = NSMutableArray()
+    @IBOutlet var table: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,9 +23,30 @@ class ViewController: UIViewController, HNAPIProtocol {
         
     }
     
+    //UITableViewDataSource 
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return stories.count
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
+        
+        var story = stories[indexPath.row] as NSDictionary
+        println(story)
+        var title = story.objectForKey("title") as NSString
+        var author = story.objectForKey("postedBy") as NSString
+        cell.text = title
+        cell.detailTextLabel.text = author 
+        
+        return cell
+    }
+    
     //delegate method
     func didRecieveResponse(results: NSDictionary) {
-        println(results["items"])
+        stories = results["items"] as NSMutableArray
+        table.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
