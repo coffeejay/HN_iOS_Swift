@@ -13,6 +13,8 @@
 		37C5DEF2194E6BE20027F142 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5DEF1194E6BE20027F142 /* Images.xcassets */; };
 		37C5DEFE194E6BE20027F142 /* HN_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5DEFD194E6BE20027F142 /* HN_iOSTests.swift */; };
 		37C5DF08194E6C340027F142 /* HNAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5DF07194E6C340027F142 /* HNAPI.swift */; };
+		37C5DF0F194EAD3A0027F142 /* HNWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5DF0D194EAD3A0027F142 /* HNWebViewController.swift */; };
+		37C5DF10194EAD3A0027F142 /* HNWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5DF0E194EAD3A0027F142 /* HNWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		37C5DEFC194E6BE20027F142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C5DEFD194E6BE20027F142 /* HN_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HN_iOSTests.swift; sourceTree = "<group>"; };
 		37C5DF07194E6C340027F142 /* HNAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNAPI.swift; sourceTree = "<group>"; };
+		37C5DF0D194EAD3A0027F142 /* HNWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HNWebViewController.swift; path = ../HNWebViewController.swift; sourceTree = "<group>"; };
+		37C5DF0E194EAD3A0027F142 /* HNWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HNWebViewController.xib; path = ../HNWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				37C5DEEA194E6BE20027F142 /* AppDelegate.swift */,
 				37C5DEEC194E6BE20027F142 /* ViewController.swift */,
+				37C5DF0D194EAD3A0027F142 /* HNWebViewController.swift */,
+				37C5DF0E194EAD3A0027F142 /* HNWebViewController.xib */,
 				37C5DEEE194E6BE20027F142 /* Main.storyboard */,
 				37C5DEF1194E6BE20027F142 /* Images.xcassets */,
 				37C5DEE8194E6BE20027F142 /* Supporting Files */,
@@ -194,6 +200,7 @@
 			files = (
 				37C5DEF0194E6BE20027F142 /* Main.storyboard in Resources */,
 				37C5DEF2194E6BE20027F142 /* Images.xcassets in Resources */,
+				37C5DF10194EAD3A0027F142 /* HNWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 				37C5DF08194E6C340027F142 /* HNAPI.swift in Sources */,
 				37C5DEED194E6BE20027F142 /* ViewController.swift in Sources */,
 				37C5DEEB194E6BE20027F142 /* AppDelegate.swift in Sources */,
+				37C5DF0F194EAD3A0027F142 /* HNWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +409,7 @@
 				37C5DF03194E6BE20027F142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37C5DF04194E6BE20027F142 /* Build configuration list for PBXNativeTarget "HN_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +418,7 @@
 				37C5DF06194E6BE20027F142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
